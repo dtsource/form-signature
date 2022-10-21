@@ -1,14 +1,14 @@
 //= require signature_pad
 
 document.addEventListener('DOMContentLoaded', function(){
-  let canvas_collection = document.getElementsByClassName("JohnHancock-canvas");
+  var canvas_collection = document.getElementsByClassName("JohnHancock-canvas");
   for (let i = 0; i < canvas_collection.length; i++) {
-    let element_id = canvas_collection[i].id;
-    let canvas = document.getElementById(element_id);
-    let hidden_field = document.getElementById(element_id+"-hidden");
+    var element_id = canvas_collection[i].id;
+    var canvas = document.getElementById(element_id);
+    var hidden_field = document.getElementById(element_id+"-hidden");
     if (canvas && hidden_field) {
-      let parent_form = canvas.closest("form");
-      let signaturePad = new SignaturePad(canvas);
+      var parent_form = canvas.closest("form");
+      var signaturePad = new SignaturePad(canvas);
 
       parent_form.onsubmit = function() {
         hidden_field.value = signaturePad.toDataURL()
@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', function(){
 }, false)
 
 function signatureClear(element_id) {
-  let canvas = document.getElementById(element_id);
-  let context = canvas.getContext("2d");
+  var canvas = document.getElementById(element_id);
+  var context = canvas.getContext("2d");
   context.clearRect(0, 0, canvas.width, canvas.height);
 }
