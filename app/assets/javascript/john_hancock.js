@@ -1,14 +1,14 @@
 //= require signature_pad
 
 document.addEventListener('DOMContentLoaded', function(){
-  const canvas_collection = document.getElementsByClassName("JohnHancock-canvas");
+  let canvas_collection = document.getElementsByClassName("JohnHancock-canvas");
   for (let i = 0; i < canvas_collection.length; i++) {
-    element_id = canvas_collection[i].id;
-    const canvas = document.getElementById(element_id);
-    const hidden_field = document.getElementById(element_id+"-hidden");
+    let element_id = canvas_collection[i].id;
+    let canvas = document.getElementById(element_id);
+    let hidden_field = document.getElementById(element_id+"-hidden");
     if (canvas && hidden_field) {
-      const parent_form = canvas.closest("form");
-      const signaturePad = new SignaturePad(canvas);
+      let parent_form = canvas.closest("form");
+      let signaturePad = new SignaturePad(canvas);
 
       parent_form.onsubmit = function() {
         hidden_field.value = signaturePad.toDataURL()
