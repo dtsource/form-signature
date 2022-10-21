@@ -70,8 +70,8 @@ Bezier.prototype._point = function (t, start, c1, c2, end) {
 /* eslint-enable no-multi-spaces, space-in-parens */
 
 function SignaturePad(canvas, options) {
-  const self = this;
-  const opts = options || {};
+  self = this;
+  opts = options || {};
 
   this.velocityFilterWeight = opts.velocityFilterWeight || 0.7;
   this.minWidth = opts.minWidth || 0.5;
