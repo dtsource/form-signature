@@ -2,7 +2,7 @@
 
 document.addEventListener('DOMContentLoaded', function(){
   var canvas_collection = document.getElementsByClassName("JohnHancock-canvas");
-  if (document.getElementById(canvas_collection[0])){   
+  if (canvas_collection.length >= 1 ){   
     var parent_form = document.getElementById(canvas_collection[0].id).closest("form");
     const signaturePads = [];
 
