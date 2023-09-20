@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function(){
           canvas.getContext("2d").scale(ratio, ratio);
           signaturePad.clear();
         }
-        window.addEventListener("resize", resizeCanvas, true);
+        // window.addEventListener("resize", resizeCanvas, true);
         // resizeCanvas();
       }
     }
