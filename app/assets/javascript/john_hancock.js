@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function(){
           signaturePad.clear();
         }
         window.addEventListener("resize", resizeCanvas, true);
-        resizeCanvas();
+        // resizeCanvas();
       }
     }
 
