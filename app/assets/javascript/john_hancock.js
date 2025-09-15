@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', function(){
         var element_id = canvas_collection[i].id;
         var canvas = document.getElementById(element_id);
         var hidden_field = document.getElementById(element_id+"-hidden");
-        hidden_field.value = signaturePads[i].toDataURL();
+        hidden_field.value = signaturePads[i].isEmpty() ? '' : signaturePads[i].toDataURL();
       }
     }
   }
